@@ -57,4 +57,58 @@ header{
 nav#menu a:hover{
   background-color: var(--destaque-inverso);
   color: var(--destaque);
+  transition: color 0.85s;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 95vw 1fr;
+
+  margin-top: 20px;
+}
+
+section#ficha{
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+  
+  grid-column: 2 / -2;
+}
+
+.foto{
+  width: 200px;
+  aspect-ratio: 1/1;
+  border-radius: 99%;
+  border: 5px solid var(--fundo-card);
+  outline: 5px solid var(--destaque);
+  display: block;
+  margin: 15px auto;
+}
+
+section#ficha h1{
+  color: var(--destaque);
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+section#ficha p{
+  margin-bottom: 30px;
+}
+
+div#social{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+div#social a{
+  color: var(--destaque);
+}
+
+div#social a:hover{
+  color: var(--destaque-inverso);
+  transition: color 0.7s;
 }
