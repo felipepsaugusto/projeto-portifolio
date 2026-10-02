@@ -63,6 +63,8 @@ nav#menu a:hover{
 main{
   display: grid;
   grid-template-columns: 1fr 95vw 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
 
   margin-top: 20px;
 }
@@ -72,8 +74,13 @@ section#ficha{
   padding: 20px;
   border-radius: 8px;
   object-fit: cover;
-  
-  grid-column: 2 / -2;
+ 
+  grid-area: 1 / 2 / 2 / -2;
+}
+
+section#detalhes{
+  grid-area: 2 / 2 / -1 / -2;
+
 }
 
 .foto{
@@ -111,4 +118,33 @@ div#social a{
 div#social a:hover{
   color: var(--destaque-inverso);
   transition: color 0.7s;
+}
+
+article{
+  background-color: var(--fundo-card);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+div#video-container{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: auto;
+}
+
+div#video-container iframe{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+h2{
+  margin: 20px auto;
+  text-align: center;
+  color: var(--destaque);
 }
